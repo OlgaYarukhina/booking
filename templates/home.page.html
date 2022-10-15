@@ -1,0 +1,92 @@
+ {{template "base" .}}
+
+ {{define "content"}}
+ <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1> This is home page</h1>
+
+      <p>This came from the template: {{index .StringMap "test"}}</p>
+      <p>ppp</p>
+     
+    </div>
+  </div>
+</div>
+ {{end}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body class="d-flex h-100 text-center text-bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">  </h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">  </a>
+            <a class="nav-link fw-bold py-1 px-0" href="#"> gfxj </a>
+            <a class="nav-link fw-bold py-1 px-0" href="#"> vnvn </a>
+          </nav>
+        </div>
+      </header>
+    
+      <main>
+        <h1>Hello researcher!</h1>
+        <p class="lead"> Are you ready?</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-black">Press here</a>
+        </p>
+      </main>
+    
+      <footer class="mt-auto text-white-50">
+        <p>Created by <a href="https://www.facebook.com/olga2828" class="text-white">Olha Yarukhina</a></a></p>
+      </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+<h1>Головна сторінка</h1>
+
+    {{ if eq .Name "Bob"}}
+    <span> Hello dear {{.Name}}</span>
+    {{ else }}
+    <span> Who are you? </span>
+    {{ end }} 
+
+    <ul>
+        {{ range .Hobbies }}
+        <li><b>{{ . }}</b></li>
+        {{ else }}
+        <b>Немає необхідної інформації </b>
+        {{ end }}
+
+
+    </ul>
+
+    <p>Користувач: {{.Name}}</p>
+-->
