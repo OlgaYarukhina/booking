@@ -1,17 +1,77 @@
  {{template "base" .}}
 
  {{define "content"}}
- <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1> This is home page</h1>
-
-      <p>This came from the template: {{index .StringMap "test"}}</p>
-      <img src="/static/images/spaceship1.jpg" height="600">
-     
-    </div>
+ 
+  <div id="main-carousel" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" style="margin: 0px;">
+         <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+              <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="5000">
+                            <img src="/static/images/spaceship1.jpg" class="d-block w-100" alt="...">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h1>Welcome to spaceship</h1>
+                                    <p>Book your the most amazing trip</p>
+                                  </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="5000">
+                            <img src="/static/images/spaceship4.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h1>Dreams Come True</h1>
+                                      <p>Some representative placeholder content for the second slide.</p>
+                                    </div>
+                          </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                              <img src="/static/images/spaceship5.jpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                          <h1>Let's Go!</h1>
+                                          <p>Some representative placeholder content for the third slide.</p>
+                                        </div>
+                            </div>
+          </div>
+      </div>
   </div>
-</div>
+
+  
+
+  <div id="main-carousel" class="carousel slide" style="position: absolute; top: 0px; z-index: 1; width: 100%" data-bs-ride="false">
+    <nav class="navbar navbar-expand-lg" style="background: rgba(233, 223, 223, 0.329)" >
+      <div class="container-fluid">
+           <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/about">About</a>
+                  </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Option
+                        </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">On board</a></li>
+                            <li><a class="dropdown-item" href="#">School</a></li>
+                          </ul>
+                        </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/about">Reviews</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                  </li>
+          </ul>      
+              <div class="d-flex">
+                <a href="/make-reservatiion" class="btn btn-danger btn-lg">Book now</a>
+              </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
  {{end}}
 
 
