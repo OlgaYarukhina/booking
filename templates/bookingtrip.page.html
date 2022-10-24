@@ -1,0 +1,75 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+<div id="main-carousel" class="carousel slide" data-bs-ride="false">
+    <nav class="navbar navbar-expand-lg" style="background: rgba(17, 16, 16, 0.582)" >
+      <div class="container-fluid">
+           <a class="navbar-brand" href="/">:)</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/about">About</a>
+                  </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Option
+                        </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/trip">Atmosphere trip</a></li>
+                            <li><a class="dropdown-item" href="/onMars">Room on Mars</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/school">School</a></li>
+                
+                          </ul>
+                        </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/reviews">Reviews</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                  </li>
+          </ul>      
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="content">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h1 class="mt-5 mb-5">Make reservation</h1>
+
+                  <form method="post" action="" class="needs-validation" novalidate>
+
+                      <div class="form-group mt-3">
+                          <label for="first_name">First name:</label>
+                          <input type="text" name="first_name" id="first_name" class="form-control" required autocomplete="off">
+                      </div>
+                      <div class="form-group mt-3">
+                          <label for="last_name">Last name:</label>
+                          <input type="text" name="last_name" id="last_name" class="form-control" required autocomplete="off">
+                      </div>
+                      <div class="form-group mt-3">
+                          <label for="email">Email:</label>
+                          <input type="text" name="email" id="email" class="form-control" required autocomplete="off">
+                      </div> <div class="form-group mt-3">
+                          <label for="phone">Phone number:</label>
+                          <input type="text" name="phone" id="phone" class="form-control" required autocomplete="off">
+                      </div>
+
+                      <hr>
+                    
+                      <input type="submit" class="btn btn-primary mt-3" value="Get me to the trip">
+                      
+                  </form>
+                </div>
+          </div>
+        </div>
+    </div>
+  {{end}}

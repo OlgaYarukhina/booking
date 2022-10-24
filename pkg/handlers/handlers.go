@@ -49,3 +49,22 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+func (m *Repository) Trip(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+	render.RenderTemlate(w, "trip.page.html", &models.TemplateData{})
+}
+
+func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+	render.RenderTemlate(w, "reservation.page.html", &models.TemplateData{})
+}
+
+func (m *Repository) BookingTrip(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+	render.RenderTemlate(w, "bookingtrip.page.html", &models.TemplateData{})
+}
+
+
