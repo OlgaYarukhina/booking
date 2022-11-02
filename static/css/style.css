@@ -1,0 +1,13 @@
+  .my-footer {
+      height: 50px;
+      padding: 10px;
+      background-color: rgb(194, 189, 189);
+    }
+    /* override styles here */
+    .notie-container {
+      box-shadow: none;
+    }
+    .datepicker {
+      z-index: 10000;
+    }
+

@@ -1,5 +1,19 @@
 {{template "base" .}}
 
+<style>
+  .paraClass {
+    font-size: 10pt;
+  }
+
+  .secondClass {
+    color: coral;
+  }
+
+  #lastPara {
+    text-decoration: underline ;
+  }
+</style>
+
 {{define "content"}}
 
 <div id="main-carousel" class="carousel slide" data-bs-ride="false">
@@ -57,8 +71,20 @@
                   <button type="submit" class="btn btn-primary mt-3 mb-3">Search now</button>
               </form>
         </div>
-    </div>
 
+        <div class="row">
+          <div class="col">
+            <p id="myParagraph">This is some text</p>
+            <p class="paraClass secondClass">This is some text</p>
+            <p id="lastPara">This is some text</p>
+            <p>
+              <button id="colorButton" class="btn btn-outline-secondary">Click here</button>
+            </p>
+          </div>
+        </div>
+        
+    </div>
+   
 </div>
 
 
