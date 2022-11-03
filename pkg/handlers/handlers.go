@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"net/http"
-
 	"github.com/OlgaYarukhina/booking/pkg/config"
 	"github.com/OlgaYarukhina/booking/pkg/models"
 	"github.com/OlgaYarukhina/booking/pkg/render"
@@ -15,14 +14,16 @@ var Repo *Repository
 type Repository struct {
 	App *config.AppCongig
 }
-//NewRepo creates a new repository 
-func NewRepo (a *config.AppCongig) *Repository {
+
+//NewRepo creates a new repository
+func NewRepo(a *config.AppCongig) *Repository {
 	return &Repository{
 		App: a,
 	}
 }
+
 //NewHandlers sets the repository for the handlers
-func NewHandlers(r *Repository){
+func NewHandlers(r *Repository) {
 	Repo = r
 }
 
@@ -66,5 +67,3 @@ func (m *Repository) BookingTrip(w http.ResponseWriter, r *http.Request) {
 	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
 	render.RenderTemlate(w, "bookingtrip.page.html", &models.TemplateData{})
 }
-
-
